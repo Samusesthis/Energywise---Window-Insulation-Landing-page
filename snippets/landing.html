@@ -1,5 +1,4 @@
 <div class="ewne-landing">
-  <a class="ewne-sticky-cta" href="#ewne-form">Stop drafts for $25 →</a>
   <section class="ewne-hero" id="ewne-hero">
     <div class="ewne-hero-inner">
       <div class="ewne-hero-copy">
@@ -165,47 +164,28 @@
       </details>
     </div>
   </section>
+
+  <div class="ewne-m-cta" role="region" aria-label="Mobile booking bar">
+    <a href="#ewne-form" class="ewne-btn ewne-btn-primary">👉 Get My Price &amp; Book</a>
+  </div>
 </div>
 
 <style>
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .ewne-landing {
     font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     color: #0b1b33;
     background: #f7f9fc;
     line-height: 1.6;
-    padding-bottom: 4.5rem;
+    padding-bottom: 6rem;
   }
   .ewne-landing section {
     max-width: 1100px;
     margin: clamp(3rem, 6vw, 5rem) auto;
     padding: 0 clamp(1.25rem, 4vw, 3rem);
-  }
-  .ewne-sticky-cta {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.95rem 1.5rem;
-    background: linear-gradient(120deg, #1a73e8, #0f5ab5);
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 -10px 24px rgba(15, 90, 181, 0.18);
-    z-index: 999;
-  }
-  @media (min-width: 900px) {
-    .ewne-sticky-cta {
-      width: auto;
-      max-width: 280px;
-      left: auto;
-      right: clamp(1.5rem, 4vw, 3rem);
-      bottom: clamp(1.5rem, 3vw, 2.5rem);
-      border-radius: 999px;
-      box-shadow: 0 18px 32px rgba(15, 90, 181, 0.24);
-    }
   }
   .ewne-hero {
     margin-top: clamp(2rem, 5vw, 4rem);
@@ -488,54 +468,133 @@
     white-space: nowrap;
     border: 0;
   }
-  @media (max-width: 640px) {
+  .ewne-m-cta {
+    display: none;
+  }
+  @media (max-width: 768px) {
     .ewne-landing section {
       padding: 0 1.25rem;
       margin: clamp(2.5rem, 10vw, 4rem) auto;
     }
-    .ewne-step {
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
+    .ewne-hero h1 {
+      font-size: clamp(2rem, 8vw, 2.6rem);
     }
-    .ewne-step-number {
-      justify-self: start;
+    .ewne-hero-sub {
+      font-size: 1.05rem;
+    }
+    .ewne-btn {
+      width: 100%;
     }
     .ewne-hero-secondary {
       flex-direction: column;
       align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .ewne-chip-list {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 0.5rem;
+    }
+    .ewne-chip {
+      flex: 0 0 auto;
+    }
+    .ewne-tile-grid,
+    .ewne-review-grid,
+    .ewne-proof-grid {
+      grid-template-columns: 1fr;
+    }
+    .ewne-stepper {
+      gap: 1.5rem;
+    }
+    .ewne-step {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 16px 32px rgba(10, 31, 68, 0.08);
+    }
+    .ewne-step-number {
+      justify-self: start;
+    }
+    .ewne-proof-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      scroll-snap-type: x mandatory;
+    }
+    .ewne-proof-item {
+      min-width: min(280px, 85vw);
+      scroll-snap-align: start;
+    }
+    .ewne-proof-item img {
+      object-fit: cover;
+    }
+    .ewne-form-card {
+      padding: clamp(2rem, 8vw, 2.75rem);
+    }
+    .ewne-jobber-wrap iframe,
+    .ewne-jobber-wrap form,
+    .ewne-jobber-wrap > div {
+      min-width: 0;
+    }
+    .ewne-landing img {
+      max-width: 100%;
+      height: auto;
+    }
+    .ewne-m-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 31, 68, 0.9);
+      padding: 1rem clamp(1rem, 6vw, 1.5rem);
+      display: block;
+      box-shadow: 0 -10px 24px rgba(10, 31, 68, 0.2);
+      z-index: 1000;
+    }
+    .ewne-m-cta .ewne-btn {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.9rem 1.2rem;
+    }
+    .ewne-desktop-only {
+      display: none !important;
+    }
+  }
+  @media (max-width: 400px) {
+    .ewne-hero h1 {
+      font-size: 2.1rem;
+    }
+    .ewne-hero-sub {
+      font-size: 1rem;
+    }
+    .ewne-chip-list {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .ewne-form-card {
+      padding: 1.85rem;
     }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var formSection = document.getElementById('ewne-form');
-    var formAnchorLinks = document.querySelectorAll('a[href="#ewne-form"]');
-
-    function smoothScrollToForm(event) {
-      if (!formSection) {
-        return;
-      }
-      event.preventDefault();
-      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      if (window.history && window.history.pushState) {
-        window.history.pushState(null, '', '#ewne-form');
-      }
-      if (window.dataLayer) {
+    var ctaLinks = document.querySelectorAll('a[href="#ewne-form"]');
+    ctaLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'cta_scroll_to_jobber_form' });
-      }
-    }
-
-    formAnchorLinks.forEach(function (link) {
-      link.addEventListener('click', smoothScrollToForm);
+      });
     });
 
     var jobberScript = document.querySelector('script[src*="work_request_embed_snippet.js"]');
     if (jobberScript) {
       jobberScript.addEventListener('load', function () {
-        if (window.dataLayer) {
-          window.dataLayer.push({ event: 'jobber_embed_script_loaded' });
-        }
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'jobber_embed_script_loaded' });
       });
     }
 
@@ -545,13 +604,26 @@
       var observer = new MutationObserver(function () {
         if (!hasRendered && jobberMount.children.length > 0) {
           hasRendered = true;
-          if (window.dataLayer) {
-            window.dataLayer.push({ event: 'jobber_embed_rendered' });
-          }
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'jobber_embed_rendered' });
           observer.disconnect();
         }
       });
       observer.observe(jobberMount, { childList: true });
     }
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id=a.getAttribute('href');
+      if(id.length>1){
+        const el=document.querySelector(id);
+        if(el){e.preventDefault();
+          const y=el.getBoundingClientRect().top+window.scrollY-12;
+          window.scrollTo({top:y,behavior:'smooth'});
+          window.dataLayer=window.dataLayer||[];
+          window.dataLayer.push({event:'nav_click',target:id});
+        }
+      }
+    });
   });
 </script>

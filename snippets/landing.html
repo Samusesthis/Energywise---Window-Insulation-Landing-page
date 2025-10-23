@@ -1,629 +1,768 @@
-<div class="ewne-landing">
-  <section class="ewne-hero" id="ewne-hero">
-    <div class="ewne-hero-inner">
-      <div class="ewne-hero-copy">
-        <p class="ewne-eyebrow">Rhode Island &amp; Southeastern Massachusetts</p>
-        <h1>Stop cold drafts for <span class="ewne-highlight">$25 per window (≤ 52″ wide)</span></h1>
-        <p class="ewne-hero-sub">Professional interior sealing that warms rooms this week — no mess.</p>
-        <div class="ewne-hero-cta">
-          <a class="ewne-btn ewne-btn-primary" href="#ewne-form">👉 Get My $25 Estimate</a>
-          <p class="ewne-hero-micro">Takes 30 seconds — no payment required.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy Wise New England | Window Insulation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ewne-primary: #0b57d0;
+      --ewne-text: #111111;
+      --ewne-muted: #333333;
+      --ewne-surface: #ffffff;
+      --ewne-band: #f7f9fc;
+      --ewne-chip: #f1f4f8;
+      --ewne-radius-lg: 16px;
+      --ewne-radius-md: 14px;
+      --ewne-shadow: 0 18px 40px -24px rgba(11, 87, 208, 0.45);
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #ffffff;
+      color: var(--ewne-text);
+    }
+
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--ewne-radius-md);
+      object-fit: cover;
+      contain-intrinsic-size: 800px 534px;
+    }
+
+    a {
+      color: var(--ewne-primary);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    .ewne-shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .ewne-section {
+      padding: 88px 0;
+    }
+
+    .ewne-section h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+
+    .ewne-section p {
+      margin: 0 0 16px;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 48px;
+    }
+
+    .ewne-btn-primary {
+      background: var(--ewne-primary);
+      color: #ffffff;
+      box-shadow: var(--ewne-shadow);
+    }
+
+    .ewne-btn-primary:hover,
+    .ewne-btn-primary:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px -16px rgba(11, 87, 208, 0.55);
+    }
+
+    .ewne-chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 40px 0 0;
+    }
+
+    .ewne-chip {
+      background: var(--ewne-chip);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-hero {
+      background: var(--ewne-band);
+    }
+
+    .ewne-hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .ewne-hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      color: var(--ewne-muted);
+      margin-bottom: 20px;
+    }
+
+    .ewne-hero h1 {
+      font-size: 52px;
+      line-height: 1.05;
+      margin: 0 0 20px;
+    }
+
+    .ewne-hero-sub {
+      margin-bottom: 32px;
+      font-size: 20px;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-hero-micro {
+      font-size: 15px;
+      color: var(--ewne-muted);
+      margin: 12px 0 0;
+    }
+
+    .ewne-hero-media {
+      position: relative;
+    }
+
+    .ewne-hero-image {
+      width: 100%;
+      border-radius: var(--ewne-radius-lg);
+      box-shadow: 0 20px 48px -30px rgba(11, 87, 208, 0.55);
+    }
+
+    .ewne-section-intro {
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    .ewne-card-grid,
+    .ewne-proof-gallery,
+    .ewne-review-list,
+    .ewne-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .ewne-card,
+    .ewne-proof-card,
+    .ewne-review-card,
+    .ewne-step-card {
+      background: var(--ewne-surface);
+      border-radius: var(--ewne-radius-lg);
+      padding: 28px;
+      box-shadow: 0 18px 36px -28px rgba(17, 17, 17, 0.25);
+    }
+
+    .ewne-proof-card img {
+      height: 240px;
+    }
+
+    .ewne-proof-card figcaption {
+      margin-top: 16px;
+      font-weight: 600;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(11, 87, 208, 0.12);
+      color: var(--ewne-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .ewne-step-card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .ewne-steps-cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .ewne-review-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ewne-review-stars {
+      font-size: 20px;
+      color: #f4b400;
+    }
+
+    .ewne-form-band {
+      background: var(--ewne-band);
+    }
+
+    .ewne-form-card {
+      background: var(--ewne-surface);
+      border-radius: var(--ewne-radius-lg);
+      padding: 32px;
+      box-shadow: 0 24px 48px -36px rgba(17, 17, 17, 0.28);
+      margin-top: 32px;
+    }
+
+    .ewne-form-card h3 {
+      margin-top: 0;
+    }
+
+    .ewne-form-sub {
+      margin: 0 0 24px;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-jobber-slot {
+      min-height: 420px;
+      border: 2px dashed rgba(11, 87, 208, 0.2);
+      border-radius: var(--ewne-radius-md);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+      color: var(--ewne-muted);
+      font-size: 16px;
+    }
+
+    .ewne-consent {
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--ewne-muted);
+      margin-top: 24px;
+    }
+
+    .ewne-faq {
+      background: #ffffff;
+    }
+
+    .ewne-faq-accordion {
+      display: grid;
+      gap: 16px;
+    }
+
+    .ewne-faq-item {
+      border-radius: var(--ewne-radius-md);
+      background: var(--ewne-surface);
+      box-shadow: 0 16px 32px -28px rgba(17, 17, 17, 0.25);
+      overflow: hidden;
+    }
+
+    .ewne-faq-question {
+      width: 100%;
+      padding: 20px 24px;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .ewne-faq-question:focus-visible {
+      outline: 2px solid var(--ewne-primary);
+      outline-offset: 2px;
+    }
+
+    .ewne-faq-toggle {
+      font-size: 26px;
+      color: var(--ewne-primary);
+    }
+
+    .ewne-faq-answer {
+      padding: 0 24px 24px;
+      color: var(--ewne-muted);
+      display: none;
+    }
+
+    .ewne-faq-answer[aria-hidden="false"] {
+      display: block;
+    }
+
+    .ewne-footer {
+      background: var(--ewne-band);
+      padding: 48px 0;
+    }
+
+    .ewne-footer-inner {
+      display: grid;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .ewne-footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+    }
+
+    .ewne-logo-placeholder {
+      width: 140px;
+      height: 48px;
+      border-radius: 12px;
+      background: #e2e8f4;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--ewne-muted);
+    }
+
+    .ewne-m-cta {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      .ewne-hero-inner {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .ewne-hero-media {
+        order: -1;
+      }
+
+      .ewne-chip-list {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ewne-shell {
+        padding: 0 14px;
+      }
+
+      .ewne-section {
+        padding: 56px 0;
+      }
+
+      .ewne-hero h1 {
+        font-size: 28px;
+      }
+
+      .ewne-hero-sub {
+        font-size: 15px;
+      }
+
+      .ewne-btn {
+        width: 100%;
+        font-size: 16px;
+      }
+
+      .ewne-chip-list {
+        margin-top: 28px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .ewne-chip {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+      }
+
+      .ewne-card-grid,
+      .ewne-proof-gallery,
+      .ewne-review-list,
+      .ewne-steps-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 16px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px;
+      }
+
+      .ewne-card,
+      .ewne-proof-card,
+      .ewne-review-card,
+      .ewne-step-card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+      }
+
+      .ewne-proof-card img {
+        height: auto;
+      }
+
+      .ewne-step-card {
+        padding: 24px;
+      }
+
+      .ewne-steps-cta {
+        margin-top: 28px;
+      }
+
+      .ewne-review-card {
+        min-height: 240px;
+      }
+
+      .ewne-form-card {
+        padding: 24px;
+      }
+
+      .ewne-jobber-slot {
+        min-height: 380px;
+        padding: 16px;
+      }
+
+      .ewne-footer-inner {
+        gap: 16px;
+      }
+
+      .ewne-footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .ewne-m-cta {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+        display: flex;
+        justify-content: center;
+        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 -12px 20px -20px rgba(0, 0, 0, 0.35);
+      }
+
+      .ewne-m-cta .ewne-btn {
+        width: 100%;
+      }
+
+      .ewne-desktop-only {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .ewne-hero h1 {
+        font-size: 24px;
+      }
+
+      .ewne-btn {
+        font-size: 15px;
+      }
+
+      .ewne-card,
+      .ewne-proof-card,
+      .ewne-review-card,
+      .ewne-step-card {
+        flex-basis: 88%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="ewne-page">
+    <section class="ewne-hero ewne-section" id="ewne-hero">
+      <div class="ewne-shell">
+        <div class="ewne-hero-inner">
+          <div class="ewne-hero-copy">
+            <p class="ewne-hero-eyebrow">Rhode Island &amp; Southeastern Massachusetts</p>
+            <h1>Stop cold drafts for $25 per window (≤ 52″ wide)</h1>
+            <p class="ewne-hero-sub">Professional interior sealing that warms rooms this week — no mess.</p>
+            <a class="ewne-btn ewne-btn-primary" href="#ewne-form">👉 Get My $25 Estimate</a>
+            <p class="ewne-hero-micro">Takes 30 seconds — no payment required.</p>
+          </div>
+          <figure class="ewne-hero-media">
+            <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3255-2-scaled.jpg" loading="lazy" alt="Energy Wise New England technician sealing a window from the interior" />
+          </figure>
         </div>
-        <div class="ewne-hero-secondary">
-          <a class="ewne-link" href="#ewne-proof">See the difference</a>
-          <a class="ewne-link" href="#ewne-reviews">Read local reviews</a>
+        <ul class="ewne-chip-list" role="list">
+          <li class="ewne-chip">Locally owned</li>
+          <li class="ewne-chip">Fast install</li>
+          <li class="ewne-chip">No mess</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ewne-pain ewne-section" id="ewne-pain">
+      <div class="ewne-shell">
+        <div class="ewne-section-intro">
+          <h2>Drafty windows cost you comfort</h2>
+          <p>Old frames leak air and energy. Our airtight interior insulation strips stop drafts, cut noise, and help your family stay cozy all winter.</p>
+        </div>
+        <div class="ewne-card-grid">
+          <article class="ewne-card">
+            <h3>Drafty rooms cost you comfort</h3>
+            <p>Bedrooms and living spaces stay the same temperature from floor to ceiling once the cold air is sealed out.</p>
+          </article>
+          <article class="ewne-card">
+            <h3>Cold rooms = rising bills</h3>
+            <p>Drafts force your system to work harder. Tight seals keep conditioned air inside so your furnace cycles less.</p>
+          </article>
+          <article class="ewne-card">
+            <h3>Condensation &amp; moisture</h3>
+            <p>Stop the icy build-up around the sash and protect trim, paint, and drywall from moisture damage.</p>
+          </article>
         </div>
       </div>
-      <div class="ewne-hero-media">
-        <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3255-2-scaled.jpg" alt="Technician sealing an interior window to stop drafts" loading="lazy" class="ewne-hero-image" />
+    </section>
+
+    <section class="ewne-proof ewne-section" id="ewne-proof">
+      <div class="ewne-shell">
+        <div class="ewne-section-intro">
+          <h2>See the difference</h2>
+          <p>We precision-seal every sash so rooms feel warmer within minutes. Most homeowners see 10–20% winter heating savings.</p>
+        </div>
+        <div class="ewne-proof-gallery">
+          <figure class="ewne-proof-card">
+            <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3611.jpg" loading="lazy" alt="Before photo showing frost build-up on a drafty window" />
+            <figcaption>Before: Frost and drafts let energy escape.</figcaption>
+          </figure>
+          <figure class="ewne-proof-card">
+            <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3435.jpg" loading="lazy" alt="Second before photo of a window with cold drafts" />
+            <figcaption>Before: Cold air spills through every seam.</figcaption>
+          </figure>
+          <figure class="ewne-proof-card">
+            <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3255-2-scaled.jpg" loading="lazy" alt="After photo with a sealed window and comfortable room" />
+            <figcaption>After: Sealed tight, warmer, and noticeably quieter.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ewne-steps ewne-section" id="ewne-steps">
+      <div class="ewne-shell">
+        <div class="ewne-section-intro">
+          <h2>How it works</h2>
+          <p>From booking to cozy rooms in three simple steps.</p>
+        </div>
+        <div class="ewne-steps-grid">
+          <article class="ewne-step-card">
+            <div class="ewne-step-number">1</div>
+            <h3>Book your visit</h3>
+            <p>Pick the date and time that suits your schedule. We serve Rhode Island and Southeastern Massachusetts.</p>
+          </article>
+          <article class="ewne-step-card">
+            <div class="ewne-step-number">2</div>
+            <h3>Seal every draft</h3>
+            <p>Our techs install interior-grade insulation strips so your windows still open and close normally.</p>
+          </article>
+          <article class="ewne-step-card">
+            <div class="ewne-step-number">3</div>
+            <h3>Feel the comfort</h3>
+            <p>Enjoy warmer rooms, a quieter home, and less wasted energy the same day.</p>
+          </article>
+        </div>
+        <div class="ewne-steps-cta">
+          <a class="ewne-btn ewne-btn-primary" href="#ewne-form">Check availability →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ewne-reviews ewne-section" id="ewne-reviews">
+      <div class="ewne-shell">
+        <div class="ewne-section-intro">
+          <h2>Neighbors are loving the cozy difference</h2>
+          <p>Hundreds of installs across Rhode Island &amp; Southeastern Massachusetts.</p>
+        </div>
+        <div class="ewne-review-list">
+          <article class="ewne-review-card">
+            <div class="ewne-review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Our bedrooms used to be freezing. The team finished in under two hours and the rooms are instantly warmer.”</p>
+            <p><strong>Melissa R.</strong> — Providence</p>
+          </article>
+          <article class="ewne-review-card">
+            <div class="ewne-review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Transparent price, no upsells, and they cleaned up every bit. My heating bill dropped noticeably this month.”</p>
+            <p><strong>David P.</strong> — Warwick</p>
+          </article>
+          <article class="ewne-review-card">
+            <div class="ewne-review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Feels like new windows without the replacement cost. We booked online and they showed up right on time.”</p>
+            <p><strong>Erin L.</strong> — New Bedford</p>
+          </article>
+        </div>
+        <div class="ewne-steps-cta">
+          <a class="ewne-btn ewne-btn-primary" href="#ewne-form">Ready to stop the drafts? Get your quote →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ewne-form-band ewne-section" id="ewne-form-band">
+      <div class="ewne-shell">
+        <h2>Get Your Price &amp; Book Your Appointment</h2>
+        <p class="ewne-form-sub">Standard windows (≤ 52″ wide) are <strong>$25 each</strong>. Wider or specialty windows are quoted on-site.</p>
+        <section id="ewne-form" class="ewne-form-card" aria-label="Window insulation booking form">
+          <div class="ewne-jobber-slot" aria-label="Jobber booking embed">Jobber work request form loads here.</div>
+        </section>
+        <p class="ewne-consent">By providing your number, you agree to receive SMS from Energy Wise New England. Msg &amp; data rates may apply. Recurring msgs. Reply STOP to opt out, HELP for help. Consent not a condition of purchase. See Terms &amp; Privacy.</p>
+      </div>
+    </section>
+
+    <section class="ewne-faq ewne-section" id="ewne-faq">
+      <div class="ewne-shell">
+        <div class="ewne-section-intro">
+          <h2>FAQ</h2>
+          <p>Answers to common questions about our interior window insulation service.</p>
+        </div>
+        <div class="ewne-faq-accordion">
+          <div class="ewne-faq-item">
+            <button class="ewne-faq-question" type="button" aria-expanded="false">How long does the install take?<span class="ewne-faq-toggle">+</span></button>
+            <div class="ewne-faq-answer" aria-hidden="true">Most homes take under two hours. We confirm timing when you book so you know exactly what to expect.</div>
+          </div>
+          <div class="ewne-faq-item">
+            <button class="ewne-faq-question" type="button" aria-expanded="false">Will the insulation look clear?<span class="ewne-faq-toggle">+</span></button>
+            <div class="ewne-faq-answer" aria-hidden="true">Yes. We use a low-profile interior system that stays nearly invisible while sealing out drafts and noise.</div>
+          </div>
+          <div class="ewne-faq-item">
+            <button class="ewne-faq-question" type="button" aria-expanded="false">Can you remove it in spring?<span class="ewne-faq-toggle">+</span></button>
+            <div class="ewne-faq-answer" aria-hidden="true">It can stay in place year-round, but we can schedule a quick removal or reinstall visit if you prefer.</div>
+          </div>
+          <div class="ewne-faq-item">
+            <button class="ewne-faq-question" type="button" aria-expanded="false">What does pricing look like?<span class="ewne-faq-toggle">+</span></button>
+            <div class="ewne-faq-answer" aria-hidden="true">Standard windows (≤ 52″ wide) are $25 each. Picture windows, bays, and specialty sizes are priced on-site before work begins.</div>
+          </div>
+          <div class="ewne-faq-item">
+            <button class="ewne-faq-question" type="button" aria-expanded="false">Where do you service?<span class="ewne-faq-toggle">+</span></button>
+            <div class="ewne-faq-answer" aria-hidden="true">We cover Rhode Island and Southeastern Massachusetts, including Providence, Warwick, Newport, Fall River, and New Bedford.</div>
+          </div>
+          <div class="ewne-faq-item">
+            <button class="ewne-faq-question" type="button" aria-expanded="false">Do you offer a warranty?<span class="ewne-faq-toggle">+</span></button>
+            <div class="ewne-faq-answer" aria-hidden="true">Every install is backed by our workmanship guarantee. If a strip loosens or a draft returns, we come back and fix it.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ewne-footer">
+    <div class="ewne-shell">
+      <div class="ewne-footer-inner">
+        <div class="ewne-logo-placeholder" aria-hidden="true">EWNE</div>
+        <div class="ewne-footer-meta">
+          <span><strong>Call:</strong> <a href="tel:14013212211">(401) 321-2211</a></span>
+          <span><strong>Email:</strong> <a href="mailto:info@energywisene.com">info@energywisene.com</a></span>
+        </div>
+        <nav class="ewne-footer-links" aria-label="Legal links">
+          <a href="#" class="ewne-link">Privacy Policy</a>
+          <a href="#" class="ewne-link">Terms</a>
+          <a href="#ewne-form" class="ewne-link">Contact</a>
+        </nav>
       </div>
     </div>
-    <ul class="ewne-chip-list">
-      <li class="ewne-chip">Locally owned</li>
-      <li class="ewne-chip">Fully insured</li>
-      <li class="ewne-chip">Transparent pricing</li>
-      <li class="ewne-chip">Installed in under an hour</li>
-    </ul>
-  </section>
-
-  <section class="ewne-tiles" id="ewne-problem">
-    <div class="ewne-section-heading">
-      <h2>Drafty windows cost you comfort and money</h2>
-      <p>Our interior insulation strips seal the leaks behind your sashes so rooms stay warm without costly replacements.</p>
-    </div>
-    <div class="ewne-tile-grid">
-      <article class="ewne-tile">
-        <h3>Cold rooms &amp; rising bills</h3>
-        <p>Heat escapes through loose frames, forcing your furnace to run longer while bedrooms stay chilly.</p>
-      </article>
-      <article class="ewne-tile">
-        <h3>Condensation &amp; moisture</h3>
-        <p>Unsealed gaps invite damp air that fogs glass and damages trim. Our seals keep the moisture out.</p>
-      </article>
-      <article class="ewne-tile">
-        <h3>Costly replacements</h3>
-        <p>Skip the thousands on new windows—get reliable comfort at $25 per standard window (≤ 52″ wide).</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="ewne-proof" id="ewne-proof">
-    <div class="ewne-section-heading">
-      <h2>See the difference</h2>
-      <p>Most homeowners see 10–20% winter heating savings after we seal every draft.</p>
-    </div>
-    <div class="ewne-proof-grid">
-      <figure class="ewne-proof-item">
-        <div class="ewne-proof-before-grid">
-          <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3611.jpg" alt="Before sealing: gaps around a drafty window frame" loading="lazy" />
-          <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3435.jpg" alt="Before sealing: window with visible moisture and gaps" loading="lazy" />
-        </div>
-        <figcaption>Before: Loose frames let cold air pour in.</figcaption>
-      </figure>
-      <figure class="ewne-proof-item">
-        <img src="https://energywisene.com/wp-content/uploads/2025/10/IMG_3255-2-scaled.jpg" alt="After sealing: window with discreet insulation strips" loading="lazy" />
-        <figcaption>After: Discreet seals lock in cozy warmth.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="ewne-steps" id="ewne-steps">
-    <div class="ewne-section-heading">
-      <h2>How it works</h2>
-      <p>Standard windows (≤ 52″ wide) are just $25 each. Wider or specialty windows are quoted on-site.</p>
-    </div>
-    <ol class="ewne-stepper">
-      <li class="ewne-step">
-        <div class="ewne-step-number">1</div>
-        <div>
-          <h3>Book your visit</h3>
-          <p>Pick an appointment that fits your schedule. We serve Rhode Island and Southeastern Massachusetts.</p>
-        </div>
-      </li>
-      <li class="ewne-step">
-        <div class="ewne-step-number">2</div>
-        <div>
-          <h3>Seal every draft</h3>
-          <p>We install precision interior insulation strips so your windows still open and lock normally.</p>
-        </div>
-      </li>
-      <li class="ewne-step">
-        <div class="ewne-step-number">3</div>
-        <div>
-          <h3>Feel the comfort</h3>
-          <p>Enjoy warmer, quieter rooms and lower energy waste the same day.</p>
-        </div>
-      </li>
-    </ol>
-    <div class="ewne-inline-cta">
-      <a class="ewne-btn ewne-btn-outline" href="#ewne-form">Check availability →</a>
-    </div>
-  </section>
-
-  <section class="ewne-reviews" id="ewne-reviews">
-    <div class="ewne-section-heading">
-      <h2>Neighbors are loving the cozy difference</h2>
-      <p>Hundreds of installs across Rhode Island &amp; Southeastern Massachusetts.</p>
-    </div>
-    <div class="ewne-review-grid">
-      <article class="ewne-review">
-        <div class="ewne-review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“They sealed 12 drafty windows in an afternoon. Our living room finally holds heat.”</p>
-        <p class="ewne-reviewer">Kelly G. · Providence, RI</p>
-      </article>
-      <article class="ewne-review">
-        <div class="ewne-review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“Straightforward $25 pricing and zero mess. The team was professional and quick.”</p>
-        <p class="ewne-reviewer">Marcus L. · Warwick, RI</p>
-      </article>
-      <article class="ewne-review">
-        <div class="ewne-review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-        <p>“Within hours the drafts were gone. Worth every dollar for the comfort boost.”</p>
-        <p class="ewne-reviewer">Sara P. · Fall River, MA</p>
-      </article>
-    </div>
-    <div class="ewne-inline-cta">
-      <a class="ewne-btn ewne-btn-outline" href="#ewne-form">Ready to stop the drafts? Get your quote →</a>
-    </div>
-  </section>
-
-  <section id="ewne-form" class="ewne-form-card" aria-labelledby="form-title">
-    <div class="ewne-form-content">
-      <h2 id="form-title">Get Your Price &amp; Book Your Appointment</h2>
-      <p class="ewne-form-sub">Standard windows (≤ 52″ wide) are <strong>$25 each</strong>. Wider/specialty windows quoted on-site.</p>
-      <p class="sr-only" id="jobber-embed-description">Use the embedded Jobber form below to request your Energy Wise New England window insulation service.</p>
-      <div class="ewne-jobber-wrap" aria-describedby="jobber-embed-description">
-        <div id="fe04ca64-7c4b-4e43-a046-b50964dae906-2015906"></div>
-        <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
-        <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="fe04ca64-7c4b-4e43-a046-b50964dae906-2015906" form_url="https://clienthub.getjobber.com/client_hubs/fe04ca64-7c4b-4e43-a046-b50964dae906/public/work_request/embedded_work_request_form?form_id=2015906"></script>
-      </div>
-      <ul class="ewne-trust-list">
-        <li>No spam or sales pressure</li>
-        <li>Work guaranteed &amp; insured</li>
-        <li>Serving RI &amp; SE MA</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="ewne-faq" id="ewne-faq">
-    <div class="ewne-section-heading">
-      <h2>FAQ</h2>
-    </div>
-    <div class="ewne-faq-list">
-      <details>
-        <summary>Will I still be able to open my windows?</summary>
-        <p>Yes. Our low-profile interior seals preserve full window operation so you can open, close, and lock them normally.</p>
-      </details>
-      <details>
-        <summary>How long does it take?</summary>
-        <p>Most homes are complete in under two hours. We work efficiently and leave your space spotless.</p>
-      </details>
-      <details>
-        <summary>Do you remove it in spring?</summary>
-        <p>The seal is discreet enough to stay year-round, but we can return to remove or adjust it on request.</p>
-      </details>
-    </div>
-  </section>
+  </footer>
 
   <div class="ewne-m-cta" role="region" aria-label="Mobile booking bar">
     <a href="#ewne-form" class="ewne-btn ewne-btn-primary">👉 Get My Price &amp; Book</a>
   </div>
-</div>
 
-<style>
-  html,
-  body {
-    overflow-x: hidden;
-  }
-  .ewne-landing {
-    font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #0b1b33;
-    background: #f7f9fc;
-    line-height: 1.6;
-    padding-bottom: 6rem;
-  }
-  .ewne-landing section {
-    max-width: 1100px;
-    margin: clamp(3rem, 6vw, 5rem) auto;
-    padding: 0 clamp(1.25rem, 4vw, 3rem);
-  }
-  .ewne-hero {
-    margin-top: clamp(2rem, 5vw, 4rem);
-  }
-  .ewne-hero-inner {
-    display: grid;
-    gap: clamp(2rem, 5vw, 3.5rem);
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    align-items: center;
-  }
-  .ewne-eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 600;
-    color: #2b6cb0;
-    margin-bottom: 0.75rem;
-    font-size: 0.85rem;
-  }
-  .ewne-hero h1 {
-    font-size: clamp(2.3rem, 5vw, 3.6rem);
-    line-height: 1.1;
-    margin-bottom: 1.25rem;
-  }
-  .ewne-highlight {
-    color: #1a73e8;
-  }
-  .ewne-hero-sub {
-    font-size: 1.2rem;
-    color: rgba(11, 27, 51, 0.75);
-    margin-bottom: 1.5rem;
-  }
-  .ewne-hero-cta {
-    display: grid;
-    gap: 0.75rem;
-    justify-items: start;
-  }
-  .ewne-hero-micro {
-    margin: 0;
-    font-size: 0.9rem;
-    color: rgba(11, 27, 51, 0.65);
-  }
-  .ewne-hero-secondary {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-top: 1.5rem;
-  }
-  .ewne-hero-image {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 25px 45px rgba(10, 31, 68, 0.22);
-  }
-  .ewne-chip-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    list-style: none;
-    margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
-    padding: 0 clamp(1.25rem, 4vw, 3rem);
-  }
-  .ewne-chip {
-    background: #ffffff;
-    border-radius: 999px;
-    padding: 0.6rem 1.4rem;
-    font-weight: 600;
-    color: rgba(11, 27, 51, 0.7);
-    box-shadow: 0 12px 28px rgba(15, 90, 181, 0.12);
-  }
-  .ewne-section-heading {
-    text-align: center;
-    margin-bottom: clamp(2rem, 4vw, 3rem);
-  }
-  .ewne-section-heading h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: 0.75rem;
-  }
-  .ewne-section-heading p {
-    font-size: 1.05rem;
-    color: rgba(11, 27, 51, 0.7);
-    max-width: 680px;
-    margin: 0 auto;
-  }
-  .ewne-tile-grid,
-  .ewne-proof-grid,
-  .ewne-review-grid {
-    display: grid;
-    gap: clamp(1.75rem, 4vw, 2.5rem);
-  }
-  .ewne-tile-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-  .ewne-tile {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: clamp(1.5rem, 3vw, 2.2rem);
-    box-shadow: 0 20px 42px rgba(10, 31, 68, 0.1);
-  }
-  .ewne-proof-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    align-items: start;
-  }
-  .ewne-proof-item {
-    text-align: center;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: clamp(1.25rem, 3vw, 1.75rem);
-    box-shadow: 0 22px 46px rgba(10, 31, 68, 0.12);
-  }
-  .ewne-proof-item img {
-    width: 100%;
-    border-radius: 16px;
-  }
-  .ewne-proof-before-grid {
-    display: grid;
-    gap: 0.75rem;
-  }
-  @media (min-width: 640px) {
-    .ewne-proof-before-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .ewne-proof-item figcaption {
-    margin-top: 0.75rem;
-    color: rgba(11, 27, 51, 0.65);
-  }
-  .ewne-stepper {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: clamp(1.5rem, 4vw, 2.25rem);
-  }
-  .ewne-step {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.25rem;
-    align-items: start;
-  }
-  .ewne-step-number {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #1a73e8, #0f5ab5);
-    color: #ffffff;
-    display: grid;
-    place-items: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 18px 36px rgba(26, 115, 232, 0.3);
-  }
-  .ewne-inline-cta {
-    text-align: center;
-    margin-top: clamp(2rem, 4vw, 3rem);
-  }
-  .ewne-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.85rem 1.75rem;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .ewne-btn-primary {
-    background: linear-gradient(120deg, #1a73e8, #0f5ab5);
-    color: #ffffff;
-    box-shadow: 0 16px 30px rgba(26, 115, 232, 0.28);
-  }
-  .ewne-btn-outline {
-    background: #ffffff;
-    border: 2px solid rgba(26, 115, 232, 0.6);
-    color: #1a73e8;
-  }
-  .ewne-btn:hover,
-  .ewne-btn:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 34px rgba(26, 115, 232, 0.24);
-  }
-  .ewne-link {
-    color: #1a73e8;
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: rgba(26, 115, 232, 0.3);
-  }
-  .ewne-link:hover,
-  .ewne-link:focus {
-    text-decoration-color: rgba(26, 115, 232, 0.6);
-  }
-  .ewne-reviews {
-    background: #eef3fb;
-    border-radius: 26px;
-    padding-top: clamp(3rem, 6vw, 4rem);
-    padding-bottom: clamp(3rem, 6vw, 4rem);
-  }
-  .ewne-review-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-  .ewne-review {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: clamp(1.75rem, 3vw, 2.3rem);
-    box-shadow: 0 18px 40px rgba(10, 31, 68, 0.12);
-    display: grid;
-    gap: 0.75rem;
-  }
-  .ewne-review-stars {
-    color: #f7a928;
-    font-size: 1.25rem;
-  }
-  .ewne-reviewer {
-    font-weight: 600;
-    color: rgba(11, 27, 51, 0.7);
-  }
-  .ewne-form-card {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 24px 48px rgba(10, 31, 68, 0.12);
-    padding: clamp(2.5rem, 5vw, 3.5rem);
-    margin-bottom: clamp(3rem, 6vw, 5rem);
-  }
-  .ewne-form-card h2 {
-    font-size: clamp(1.9rem, 3vw, 2.5rem);
-    margin-bottom: 0.75rem;
-  }
-  .ewne-form-sub {
-    margin-bottom: 1.5rem;
-    color: rgba(11, 27, 51, 0.75);
-    font-size: 1.05rem;
-  }
-  .ewne-jobber-wrap {
-    position: relative;
-    width: 100%;
-  }
-  .ewne-jobber-wrap > div,
-  .ewne-jobber-wrap iframe,
-  .ewne-jobber-wrap form {
-    width: 100%;
-  }
-  .ewne-trust-list {
-    list-style: none;
-    display: grid;
-    gap: 0.5rem;
-    margin: 1.75rem 0 0;
-    padding: 0;
-    color: rgba(11, 27, 51, 0.75);
-  }
-  .ewne-faq {
-    background: #eef3fb;
-    border-radius: 24px;
-    padding-top: clamp(3rem, 6vw, 4rem);
-    padding-bottom: clamp(3rem, 6vw, 4rem);
-  }
-  .ewne-faq-list {
-    max-width: 780px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
-  }
-  .ewne-faq details {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 1.25rem 1.5rem;
-    box-shadow: 0 16px 32px rgba(10, 31, 68, 0.1);
-  }
-  .ewne-faq summary {
-    cursor: pointer;
-    font-weight: 600;
-    outline: none;
-  }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  .ewne-m-cta {
-    display: none;
-  }
-  @media (max-width: 768px) {
-    .ewne-landing section {
-      padding: 0 1.25rem;
-      margin: clamp(2.5rem, 10vw, 4rem) auto;
-    }
-    .ewne-hero h1 {
-      font-size: clamp(2rem, 8vw, 2.6rem);
-    }
-    .ewne-hero-sub {
-      font-size: 1.05rem;
-    }
-    .ewne-btn {
-      width: 100%;
-    }
-    .ewne-hero-secondary {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-    .ewne-chip-list {
-      overflow-x: auto;
-      flex-wrap: nowrap;
-      padding-bottom: 0.5rem;
-    }
-    .ewne-chip {
-      flex: 0 0 auto;
-    }
-    .ewne-tile-grid,
-    .ewne-review-grid,
-    .ewne-proof-grid {
-      grid-template-columns: 1fr;
-    }
-    .ewne-stepper {
-      gap: 1.5rem;
-    }
-    .ewne-step {
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
-      padding: 1.25rem;
-      border-radius: 18px;
-      background: #ffffff;
-      box-shadow: 0 16px 32px rgba(10, 31, 68, 0.08);
-    }
-    .ewne-step-number {
-      justify-self: start;
-    }
-    .ewne-proof-grid {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
-      scroll-snap-type: x mandatory;
-    }
-    .ewne-proof-item {
-      min-width: min(280px, 85vw);
-      scroll-snap-align: start;
-    }
-    .ewne-proof-item img {
-      object-fit: cover;
-    }
-    .ewne-form-card {
-      padding: clamp(2rem, 8vw, 2.75rem);
-    }
-    .ewne-jobber-wrap iframe,
-    .ewne-jobber-wrap form,
-    .ewne-jobber-wrap > div {
-      min-width: 0;
-    }
-    .ewne-landing img {
-      max-width: 100%;
-      height: auto;
-    }
-    .ewne-m-cta {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(10, 31, 68, 0.9);
-      padding: 1rem clamp(1rem, 6vw, 1.5rem);
-      display: block;
-      box-shadow: 0 -10px 24px rgba(10, 31, 68, 0.2);
-      z-index: 1000;
-    }
-    .ewne-m-cta .ewne-btn {
-      width: 100%;
-      font-size: 1rem;
-      padding: 0.9rem 1.2rem;
-    }
-    .ewne-desktop-only {
-      display: none !important;
-    }
-  }
-  @media (max-width: 400px) {
-    .ewne-hero h1 {
-      font-size: 2.1rem;
-    }
-    .ewne-hero-sub {
-      font-size: 1rem;
-    }
-    .ewne-chip-list {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-    .ewne-form-card {
-      padding: 1.85rem;
-    }
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var ctaLinks = document.querySelectorAll('a[href="#ewne-form"]');
-    ctaLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'cta_scroll_to_jobber_form' });
-      });
-    });
-
-    var jobberScript = document.querySelector('script[src*="work_request_embed_snippet.js"]');
-    if (jobberScript) {
-      jobberScript.addEventListener('load', function () {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'jobber_embed_script_loaded' });
-      });
-    }
-
-    var jobberMount = document.getElementById('fe04ca64-7c4b-4e43-a046-b50964dae906-2015906');
-    if (jobberMount) {
-      var hasRendered = false;
-      var observer = new MutationObserver(function () {
-        if (!hasRendered && jobberMount.children.length > 0) {
-          hasRendered = true;
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({ event: 'jobber_embed_rendered' });
-          observer.disconnect();
-        }
-      });
-      observer.observe(jobberMount, { childList: true });
-    }
-  });
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const id=a.getAttribute('href');
-      if(id.length>1){
-        const el=document.querySelector(id);
-        if(el){e.preventDefault();
-          const y=el.getBoundingClientRect().top+window.scrollY-12;
-          window.scrollTo({top:y,behavior:'smooth'});
-          window.dataLayer=window.dataLayer||[];
-          window.dataLayer.push({event:'nav_click',target:id});
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqItems = Array.from(document.querySelectorAll('.ewne-faq-item'));
+      if (faqItems.length) {
+        const firstBtn = faqItems[0].querySelector('.ewne-faq-question');
+        const firstAnswer = faqItems[0].querySelector('.ewne-faq-answer');
+        if (firstBtn && firstAnswer) {
+          firstBtn.setAttribute('aria-expanded', 'true');
+          firstAnswer.setAttribute('aria-hidden', 'false');
         }
       }
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector('.ewne-faq-question');
+        const answer = item.querySelector('.ewne-faq-answer');
+        if (!button || !answer) return;
+        button.addEventListener('click', () => {
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          faqItems.forEach((other) => {
+            const otherBtn = other.querySelector('.ewne-faq-question');
+            const otherAnswer = other.querySelector('.ewne-faq-answer');
+            if (!otherBtn || !otherAnswer) return;
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherAnswer.setAttribute('aria-hidden', 'true');
+            const toggle = otherBtn.querySelector('.ewne-faq-toggle');
+            if (toggle) toggle.textContent = '+';
+          });
+          if (!isExpanded) {
+            button.setAttribute('aria-expanded', 'true');
+            answer.setAttribute('aria-hidden', 'false');
+            const toggle = button.querySelector('.ewne-faq-toggle');
+            if (toggle) toggle.textContent = '−';
+          } else {
+            button.setAttribute('aria-expanded', 'false');
+            answer.setAttribute('aria-hidden', 'true');
+            const toggle = button.querySelector('.ewne-faq-toggle');
+            if (toggle) toggle.textContent = '+';
+          }
+        });
+      });
     });
-  });
-</script>
+
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          const el=document.querySelector(id);
+          if(el){e.preventDefault();
+            const y=el.getBoundingClientRect().top+window.scrollY-12;
+            window.scrollTo({top:y,behavior:'smooth'});
+            window.dataLayer=window.dataLayer||[];
+            window.dataLayer.push({event:'nav_click',target:id});
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

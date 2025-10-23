@@ -1,0 +1,37 @@
+README.md
+# Energy Wise New England — Window Insulation Landing Page
+
+Single-page marketing/booking experience for **Energy Wise New England** (RI + SE MA).
+Primary CTA: *Pick a Time* → Jobber booking embed.
+
+---
+
+## What’s here
+- **Hero**: “Stop Cold Drafts for **$25 per window (≤ 52″ wide)**”
+- **Trust chips**: Locally owned, fast install, no mess, etc.
+- **Steps/How it works**: 1-2-3 process
+- **Proof strip**: Before/after photos
+- **FAQ** + **Compliance** copy (SMS consent / Privacy / Terms)
+- **Form zone `#ewne-form`**: Container for **Jobber** embed
+
+> This repo initially stores the **production HTML/CSS snippet** we paste into Elementor’s **HTML widget** (Hello Elementor theme).
+
+---
+
+## Brand tokens
+- Primary: `#0B57D0`  
+- Text: `#111` (body), `#333` (muted)  
+- Surfaces: `#f1f4f8` (chip), `#f7f9fc` (band)  
+- Namespace all classes with `.ewne-…`
+
+---
+
+## Snippet usage
+1. In WordPress → Elementor, add an **HTML** widget.
+2. Paste the latest snippet from `/snippets/landing.html` (to be added).
+3. Images: upload to Media Library and update `src` URLs.
+4. **Jobber embed**: paste the Jobber `<iframe>` inside
+   ```html
+   <section id="ewne-form" class="ewne-form-card">
+     <!-- Jobber iframe goes here -->
+   </section>

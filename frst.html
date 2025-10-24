@@ -1,0 +1,137 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Energy Wise NE — Frost</title>
+<style>
+:root{--blue:#0B57D0;--text:#111;--muted:#333;--chip:#f1f4f8;--band:#f7f9fc;--hero-grad:linear-gradient(135deg,#0B57D0 0%,#90CAF9 45%,#FFF8E1 100%);}
+*{box-sizing:border-box}html,body{margin:0;background:#fff;color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+.ewne-shell{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+h1,h2,h3{margin:0 0 .5rem}
+.ewne-band{background:var(--band)}
+/* Hero */
+.ewne-hero{padding:72px 0 48px;background:var(--hero-grad);color:#fff}
+.ewne-title{font-size:34px;line-height:1.15;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.ewne-sub,.ewne-price{margin:.25rem 0 .5rem;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.ewne-price{font-weight:700}
+.ewne-cta{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+.ewne-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 16px;border-radius:14px;border:1px solid transparent;text-decoration:none;font-weight:700;letter-spacing:.01em}
+.ewne-btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(11,87,208,.25)}
+.ewne-btn-secondary{background:#fff;color:var(--blue);border-color:rgba(11,87,208,.35)}
+.ewne-chips{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.ewne-chip{background:var(--chip);border:1px solid rgba(0,0,0,.06);border-radius:999px;padding:8px 12px}
+/* Cards / grids */
+.ewne-grid{display:grid;gap:12px}.ewne-three{grid-template-columns:repeat(3,1fr)}
+.ewne-card,.ewne-step,.ewne-testimonial,.ewne-form-card{background:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(17,17,17,.06);border:1px solid rgba(17,17,17,.06);padding:16px}
+.ewne-lead{color:var(--muted)}
+/* Proof gallery */
+.ewne-proof-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ewne-ph{aspect-ratio:4/3;border-radius:12px;background:linear-gradient(135deg,#e9eef5,#d9e4ff)}
+figure{margin:0}figcaption{color:var(--muted);font-size:.9rem;margin-top:6px}
+/* FAQ */
+.ewne-faq .item{border:1px solid rgba(0,0,0,.08);border-radius:14px;background:#fff;margin-bottom:10px}
+.ewne-faq .q{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;cursor:pointer;font-weight:600}
+.ewne-faq .a{display:none;padding:0 14px 14px;color:var(--muted)}
+/* Footer */
+.ewne-footer{padding:28px 0;color:#333}.ewne-footer a{color:var(--blue)}
+/* Sticky mobile CTA */
+.ewne-m-cta{display:none}
+@media (max-width:768px){
+  section{padding:36px 0}.ewne-title{font-size:24px}.ewne-cta .ewne-btn{flex:1 1 100%}
+  .ewne-chips{overflow-x:auto;flex-wrap:nowrap}
+  .ewne-three{grid-template-columns:1fr}
+  .ewne-proof-row{display:grid;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory}
+  .ewne-proof-row figure{scroll-snap-align:start}
+  .ewne-m-cta{display:block;position:sticky;bottom:0;left:0;right:0;padding:10px 14px;background:rgba(247,249,252,.92);backdrop-filter:saturate(140%) blur(6px);border-top:1px solid rgba(0,0,0,.06);z-index:50}
+  .ewne-m-cta .ewne-btn{width:100%}
+}
+</style></head><body>
+<main class="ewne-shell">
+  <section class="ewne-hero">
+    <h1 class="ewne-title">Stop Cold Drafts Fast.</h1>
+    <p class="ewne-sub">Professional interior sealing that makes your home cozier this week — no mess, no stress.</p>
+    <p class="ewne-price">Only $25 per window (≤ 52″ wide).</p>
+    <div class="ewne-cta">
+      <a href="#ewne-form" class="ewne-btn ewne-btn-primary">Get My Price</a>
+      <a href="#ewne-form" class="ewne-btn ewne-btn-secondary">Pick a Time</a>
+    </div>
+    <ul class="ewne-chips" aria-label="Trust reasons">
+      <li class="ewne-chip">✔️ Locally Owned</li><li class="ewne-chip">⚡ Fast Install</li><li class="ewne-chip">🧼 No Mess</li>
+    </ul>
+  </section>
+
+  <section class="ewne-pain">
+    <h2>Drafty windows cost you comfort</h2>
+    <div class="ewne-grid ewne-three">
+      <article class="ewne-card"><h3>Drafty rooms</h3><p>Bedrooms and living spaces stay cold until every leak is sealed.</p></article>
+      <article class="ewne-card"><h3>Rising bills</h3><p>Heat escapes through gaps, forcing your system to run longer.</p></article>
+      <article class="ewne-card"><h3>Condensation</h3><p>Sealing helps cut moisture and protects wood and paint.</p></article>
+    </div>
+  </section>
+
+  <section class="ewne-proof ewne-band">
+    <h2>See the difference</h2>
+    <div class="ewne-proof-row">
+      <figure><div class="ewne-ph" aria-hidden="true"></div><figcaption>Before: visible gaps.</figcaption></figure>
+      <figure><div class="ewne-ph" aria-hidden="true"></div><figcaption>After: sealed & clear.</figcaption></figure>
+      <figure><div class="ewne-ph" aria-hidden="true"></div><figcaption>After: warmer room.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ewne-steps">
+    <h2>How it works</h2>
+    <div class="ewne-grid ewne-three">
+      <article class="ewne-step"><h3>1) Book your visit</h3><p>Pick the date and time that suits your schedule.</p></article>
+      <article class="ewne-step"><h3>2) Seal every draft</h3><p>Interior-grade film installed neatly. Windows still open/close.</p></article>
+      <article class="ewne-step"><h3>3) Feel the comfort</h3><p>Enjoy warmer rooms and less wasted energy.</p></article>
+    </div>
+    <p style="margin-top:12px"><a class="ewne-btn ewne-btn-primary" href="#ewne-form">Check availability →</a></p>
+  </section>
+
+  <section id="ewne-form" class="ewne-form-band ewne-band">
+    <h2>Get Your Price & Book Your Appointment</h2>
+    <p class="ewne-lead">Standard windows (≤ 52″ wide) are <strong>$25 each</strong>. Wider/specialty quoted on-site.</p>
+    <section class="ewne-form-card">
+      <div class="ewne-jobber-slot" role="group" aria-label="Jobber booking embed placeholder"><p>Jobber form embeds here in production.</p></div>
+      <p class="ewne-lead">By providing your number, you agree to receive SMS from Energy Wise New England. Msg & data rates may apply. Recurring msgs. Reply STOP to opt out, HELP for help. Consent not a condition of purchase. See Terms & Privacy.</p>
+    </section>
+  </section>
+
+  <section class="ewne-faq">
+    <h2>FAQ</h2>
+    <div class="item"><div class="q">How long does it take?<span>+</span></div><div class="a">Most homes take under two hours.</div></div>
+    <div class="item"><div class="q">Will the film look clear?<span>+</span></div><div class="a">Yes—near invisible once installed.</div></div>
+    <div class="item"><div class="q">Can you remove it in spring?<span>+</span></div><div class="a">Yes. Removes cleanly when you’re ready.</div></div>
+    <div class="item"><div class="q">What does pricing look like?<span>+</span></div><div class="a">$25 per standard window (≤ 52″). Wider/specialty quoted on-site.</div></div>
+    <div class="item"><div class="q">Where do you service?<span>+</span></div><div class="a">Rhode Island & Southeastern Massachusetts.</div></div>
+    <div class="item"><div class="q">Do you offer a warranty?<span>+</span></div><div class="a">Yes—workmanship guarantee through winter season.</div></div>
+  </section>
+
+  <footer class="ewne-footer ewne-band">
+    <p><strong>Energy Wise New England</strong> — (401) 321-2211 • info@energywisene.com</p>
+    <p><a href="#">Privacy Policy</a> • <a href="#">Terms</a> • <a href="#">Contact</a></p>
+  </footer>
+</main>
+
+<div class="ewne-m-cta" role="region" aria-label="Mobile booking bar">
+  <a href="#ewne-form" class="ewne-btn ewne-btn-primary">👉 Get My Price & Book</a>
+</div>
+
+<script>
+/* smooth scroll + analytics */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href'); if(id.length>1){const el=document.querySelector(id);
+      if(el){e.preventDefault(); const y=el.getBoundingClientRect().top+scrollY-12;
+        scrollTo({top:y,behavior:'smooth'}); window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({event:'nav_click',target:id});}}});
+});
+/* FAQ accordion (single open) */
+document.querySelectorAll('.ewne-faq .item .q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const open=q.parentElement.classList.toggle('open');
+    document.querySelectorAll('.ewne-faq .item').forEach(it=>{
+      if(it!==q.parentElement){it.classList.remove('open'); it.querySelector('.a').style.display='none'; it.querySelector('.q span').textContent='+';}
+    });
+    q.nextElementSibling.style.display=open?'block':'none'; q.querySelector('span').textContent=open?'–':'+';});});
+</script>
+</body></html>
